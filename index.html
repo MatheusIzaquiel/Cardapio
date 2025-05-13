@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <title>Cardápio</title>
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header-bg">
+      <div class="header-logo">
+        <img src="assets/hamb-1.png" alt="Logo">
+        <h1>Hamburgueria</h1>
+        <p>Rua Rio de Janeiro, 98, Centro</p>
+        <div class="info" id="date-span">
+          <span>Segunda à Domingo - 18:00 às 00:30</span>
+        </div>
+      </div>
+    </header>
+    <!--HEADER FIM-->
+
+    <!--MAIN-->
+    <main id="menu">
+      <!--CART-->
+      <div class="cart" id="cart-modal">
+        <div class="product-cart">
+          <h3>Meu carrinho</h3>
+          <div class="cart-items" id="cart-items"></div>
+          <p>Total: <span id="cart-total">0.00</span></p>
+          <p>Endereço de entrega:</p>
+          <input type="text" placeholder="Digite seu endereço" id="address">
+          <p class="address-warn" id="address-warn">Digite seu endereço!</p>
+          <div class="modal-buttons">
+            <button id="close-modal-btn">Fechar</button>
+            <button id="checkout-btn" class="btn2">Finalzar pedido</button>
+          </div>
+        </div>
+      </div>
+      <!--CART FIM-->
+
+      <h2>Conheça nosso Menu</h2>
+
+      <div class="grid">
+        <section class="product">
+          <img src="assets/hamb-1.png" alt="Smash Clássico">
+          <div class="content">
+              <h3>Smash Clássico</h3>
+              <p>Hambúrguer de 120g no estilo smash, selado na chapa, com queijo prato derretido, pão brioche levemente tostado e maionese especial da casa. Simples, suculento e direto ao ponto.</p>
+              <div class="price">
+                <span>R$ 19.99</span>
+                <button class="add-to-cart-btn" data-name="Smash Clássico" data-price="19.99">
+                  <i class="bi bi-cart"></i>
+                </button>
+              </div>
+          </div>
+        </section>
+    
+        <section class="product">
+          <img src="assets/hamb-2.png" alt="BBQ Duplo">
+          <div class="content">
+              <h3>BBQ Duplo</h3>
+              <p>Duplo hambúrguer de 100g cada, cobertos com cheddar cremoso, cebola crocante e molho barbecue artesanal. Pesa cerca de 250g e traz o equilíbrio perfeito entre defumado e cremoso.</p>
+              <div class="price">
+                <span>R$ 29.99</span>
+                <button class="add-to-cart-btn" data-name="BBQ Duplo" data-price="29.99">
+                  <i class="bi bi-cart"></i>
+                </button>
+              </div>
+          </div>
+        </section>
+
+      <section class="product">
+        <img src="assets/hamb-3.png" alt="Bacon Lovers">
+        <div class="content">  
+            <h3>Bacon Lovers</h3>
+            <p>Carne de 150g grelhada no ponto, fatias generosas de bacon crocante, queijo cheddar derretido e maionese defumada, tudo no pão australiano. Ideal para fãs de bacon com sabor intenso.</p>
+            <div class="price">
+              <span>R$ 25.99</span>
+              <button class="add-to-cart-btn" data-name="Bacon Lovers" data-price="25.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+
+      <section class="product">
+        <img src="assets/hamb-7.png" alt="Cheddar & Onion">
+        <div class="content">  
+            <h3>Cheddar & Onion</h3>
+            <p>Hambúrguer de 130g coberto com cheddar inglês fundido e uma camada generosa de cebola caramelizada na manteiga. Vem no pão brioche com leve toque adocicado e molho especial.</p>
+            <div class="price">
+              <span>R$ 32.99</span>
+              <button class="add-to-cart-btn" data-name="Cheddar & Onion" data-price="32.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+
+      <section class="product">
+        <img src="assets/hamb-5.png" alt="Picante Texano">
+        <div class="content">  
+            <h3>Picante Texano</h3>
+            <p>Blend de 140g com pimenta jalapeño picada, queijo pepperjack, molho chipotle picante e crispy de cebola. Aproximadamente 260g de pura ousadia no sabor, sem abrir mão do equilíbrio.<p>
+            <div class="price">
+              <span>R$ 31.99</span>
+              <button class="add-to-cart-btn" data-name="Picante Texano" data-price="31.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+
+      <section class="product">
+        <img src="assets/hamb-8.png" alt="Veggie Supreme">
+        <div class="content">  
+            <h3>Veggie Supreme</h3>
+            <p>Hambúrguer 100% vegetal de grão-de-bico e lentilha, com queijo vegano, alface americana, tomate fresco e molho de ervas finas. Leve, saudável e com textura surpreendente, pesa cerca de 220g.</p>
+            <div class="price">
+              <span>R$ 19.99</span>
+              <button class="add-to-cart-btn" data-name="Veggie Supreme" data-price="19.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+
+      <section class="product">
+        <img src="assets/hamb-4.png" alt="Frango Crocante">
+        <div class="content">  
+            <h3>Frango Crocante</h3>
+            <p>Filé de frango empanado crocante de 150g, com maionese temperada, alface americana e queijo prato. Tudo isso no pão de leite macio, criando um lanche de textura irresistível.</p>
+            <div class="price">
+              <span>R$ 22.99</span>
+              <button class="add-to-cart-btn" data-name="Frango Crocante" data-price="22.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+
+      <section class="product">
+        <img src="assets/hamb-1.png" alt="X-Tudo Master">
+        <div class="content">  
+            <h3>X-Tudo Master</h3>
+            <p>Um monstro de 300g com carne bovina, bacon, ovo frito, presunto, queijo muçarela e batata palha. Acompanha molho verde da casa e maionese temperada, no pão com gergelim tostado.</p>
+            <div class="price">
+              <span>R$ 35.99</span>
+              <button class="add-to-cart-btn" data-name="X-Tudo Master" data-price="35.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+    </div>  
+
+    <h2>Bebidas</h2>
+    <div class="grid">
+      <section class="product">
+        <img src="assets/refri-1.png" alt="Coca-Cola">
+        <div class="content">  
+            <h3>Coca-Cola</h3>
+            <p>Gélida, refrescante e com aquele sabor inconfundível que todo mundo ama.Acompanha perfeitamente seu hambúrguer, seja no almoço ou na madruga!</p>
+            <div class="price">
+              <span>R$ 5.99</span>
+              <button class="add-to-cart-btn" data-name="Coca-Cola" data-price="5.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+
+      <section class="product">
+          <img src="assets/refri-2.png" alt="Guaraná Antartica">
+        <div class="content">  
+            <h3>Guaraná Antartica</h3>
+            <p>O sabor do Brasil em cada gole: leve, docinho e natural como deve ser. Ideal pra equilibrar o lanche e dar aquele toque nostálgico à experiência!</p>
+            <div class="price">
+              <span>R$ 5.99</span>
+              <button class="add-to-cart-btn" data-name="Guaraná Antartica" data-price="5.99">
+                <i class="bi bi-cart"></i>
+              </button>
+            </div>  
+        </div>
+      </section>
+    </div>
+    </main>
+    <!--MAIN FIM-->
+
+    <!--FOOTER-->
+    <footer>
+      <button id="cart-btn">
+        (<span id="cart-count">0</span>) Meu Carrinho <i class="bi bi-cart"></i>
+      </button>
+    </footer>
+    <!--FOOTER FIM-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>  
+  <script src="script.js"></script>  
+</body>
+</html>
