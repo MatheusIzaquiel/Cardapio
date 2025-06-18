@@ -13,3 +13,4 @@ Um projeto simples de um cardápio digital criado com HTML, CSS e JavaScript. Id
 - Layout responsivo
 - Itens organizados por categorias
 - Design moderno e limpo
+Projeto criado como desafio da DIO. Pull Request aberto com sucesso!
